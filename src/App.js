@@ -5,13 +5,13 @@ import Alert from './components/Alert';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import React, { useState } from 'react'
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes
-  // Link
-} from "react-router-dom"
-// import { Switch } from 'react-router-dom';
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Routes
+//   // Link
+// } from "react-router-dom"
+// // import { Switch } from 'react-router-dom';
 
 
 function App() {
@@ -42,18 +42,13 @@ function App() {
     }
   }
   return (
-
-    <Router>
+    <>
       <Navbar title="textutil" textabout="About" mode={mode} togglemode={togglemode} />
       <Alert alert={alert} />
-      <div className='container my-5'>
-      <Routes>
-      {/* <Route path="/about" element={<About />} /> */}
-      <Route path="/" element={<div className="container"><TextForm text="Text converter" mode={mode} alert={alert} showalert={showalert} /></div>} />
-      </Routes>
-      </div>
+      <div className="container"><TextForm text="Text converter" mode={mode} alert={alert} showalert={showalert} /></div>
 
-    </Router>
+    </>
+
     // {/* // -->jsx */}
 
   );

@@ -1,6 +1,6 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
-import {Link} from 'react-router-dom'
+// import {Link} from 'react-router-dom'
 export default function Navbar(props) {
   return (
     <>
@@ -9,7 +9,7 @@ export default function Navbar(props) {
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
-          <Link className={`navbar-brand bg-${props.mode}`} to="/">{props.title}</Link>
+          <a className={`navbar-brand bg-${props.mode}`} href="#">{props.title}</a>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo03">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
